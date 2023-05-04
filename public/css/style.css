@@ -18,6 +18,7 @@
 }
 html {
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 ::-webkit-scrollbar {
     width: 16px;
@@ -474,6 +475,7 @@ footer {
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 0.2s ease-in-out, color 0.2s;
+    cursor: pointer;
 }
 
 .f-link:hover {
@@ -496,12 +498,13 @@ option {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 60vw;
-    gap: 5vw;
+    width: 70vw;
+    gap: 30px;
 }
 .code-element {
     display: flex;
     flex-direction: column;
+    max-width: 45vw;
 }
 .code-element > span {
     color: #050f25;
@@ -526,7 +529,21 @@ option {
     flex-direction: column;
     gap: 40px;
 }
-
+.try-btn {
+    align-self: center;
+    text-decoration: none;
+    border-radius: var(--border-radius);
+    background-image: linear-gradient(to left, #ef9777, var(--headline-color));
+    background-size: 500%;
+    background-position: left 50%;
+    transition-duration: 0.3s;
+    color: var(--accent-color4);
+    padding: 12px 26px;
+}
+.try-btn:hover {
+    color: var(--headline-color);
+    background-position: right 100%;
+}
 @media (orientation: portrait) {
     .code-node {
         flex-direction: column;
@@ -545,6 +562,7 @@ option {
     .f-right {
         align-items: center;
         justify-content: space-between;
+        gap: 0;
     }
     .f-left {
         text-align: center;
@@ -557,6 +575,9 @@ option {
     }
     .code-element > span {
         text-align: center;
+    }
+    .code-element {
+        max-width: unset;
     }
     .code-explanation > h2 {
         text-align: center;
