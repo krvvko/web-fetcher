@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Data Fetching Example</title>
+    <title>WebFetcher - krvvko</title>
     <script defer src="main.js"></script>
+    <link rel="icon" type="image/x-icon" href="/media/logo.png">
     <link href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/prism.css" rel="stylesheet">
@@ -14,7 +15,7 @@
 
 <main>
 
-    <div class="showcase">
+    <div class="showcase" id="try">
         <div class="top rellax" data-rellax-speed="3">
             <h1>Web - <span id="animate-word"></span><span class="blink">|</span></h1>
             <span>Made with Node.js by krvvko</span>
@@ -60,7 +61,7 @@
                             </g>
                         </g>
                     </svg>
-                    <span>Wrap - krvvko</span>
+                    <span>WebFetcher - krvvko</span>
                     <div class="close">
                         <svg fill="#000000" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
                             <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -141,7 +142,7 @@
             </div>
             <div style="position: relative">
                 <div id="loading" style="display: none">
-                    <span>Обработка</span>
+                    <span>Making Request</span>
                     <span class="loader"></span>
                 </div>
                 <div class="selectors-container" id="selectors-container">
@@ -155,6 +156,8 @@
                             <option value="querySelector">querySelector</option>
                             <option value="querySelectorAll">querySelectorAll</option>
                             <option value="getElementById">getElementById</option>
+                            <option value="getElementsByClassName">getElementsByClassName</option>
+                            <option value="getElementsByTagName">getElementsByTagName</option>
                         </select>
                     </div>
                     <div class="input-container">
@@ -174,6 +177,7 @@
                             <option value="name">name</option>
                             <option value="classList">class list</option>
                             <option value="id">id</option>
+                            <option value="disabled">disabled</option>
                         </select>
                     </div>
                     <button class="btn-or-input submit-btn" id="fetchButton">Fetch Data</button>
@@ -237,6 +241,7 @@
 }</code></pre>
                 </div>
             </div>
+            <a href="#try" class="btn-or-input try-btn">Try It Yourself</a>
         </div>
         <footer>
             <div class="f-left">
